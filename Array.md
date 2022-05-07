@@ -3,6 +3,28 @@
 <h2> Code used: <a href="https://www.w3schools.com/js/"> javascript </a> </h2>
 
 ## Methods -1-  contain the basics:
+## !!! Mutating : mean that the Array can  edit, example:
+
+```javascript
+// since the array will be mutated, 
+// use 'let' rather than 'const'
+
+let mutatingAdd = ['a', 'b', 'c', 'd', 'e']; 
+
+mutatingAdd.push('f'); // ['a', 'b', 'c', 'd', 'e', 'f']
+mutatingAdd.unshift('z'); // ['z', 'a', 'b', 'c', 'd', 'e' 'f']
+```
+
+## !!! Non-Mutating : mean the original Array can't edit, example:
+
+```javascript
+// since we will not be mutating, 
+// use const
+const arr1 = ['a', 'b', 'c', 'd', 'e'];
+
+const arr2 = arr1.concat('f'); // ['a', 'b', 'c', 'd', 'e'. 'f']
+console.log(arr1); // ['a', 'b', 'c', 'd', 'e']
+```
 
 <ol>
   <li>
@@ -44,7 +66,7 @@ document.getElementById("demo").innerHTML = fruits.toString();
 
   <li>
    <h3> 
-    pop( ):
+    pop( ):  '' Removes --Mutating-- at the end ''
   </h3>
   <h5>
   The pop() method removes the last element from an array:
@@ -63,7 +85,7 @@ document.getElementById("demo2").innerHTML = fruits;
 
   <li>
     <h3>
-      push( ):
+      push( ): '' Add --Mutating-- to the end ''
     </h3> 
     <h5>
       The push() method appends a new element to an array:
@@ -82,7 +104,7 @@ document.getElementById("demo2").innerHTML = fruits;
 ```
   <li>
   <h3>
-      shift( ):
+      shift( ):  '' Removes --Mutating-- at the begining ''
   </h3>
   <h5>
     The shift() method removes the first element of an array (and "shifts" the other elements to the left):
@@ -101,7 +123,7 @@ document.getElementById("demo2").innerHTML = fruits;
 
 <li>
   <h3>
-    unshift( ):
+    unshift( ): '' Add --Mutating-- to the beginning ''
   </h3>
   <h5>
     The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements.
@@ -149,7 +171,7 @@ Use `pop()` or `shift()` instead.
 
 <li>
 <h3>
-  Concat():
+  Concat(): '' Add -- Non-Mutating-- ''
 </h3>  
   <h5> 
     The concat() method creates a new array by merging (concatenating) existing arrays:
@@ -201,7 +223,7 @@ document.getElementById("demo").innerHTML = myChildren;
 
 <li>
   <h3>
-  Splice():
+  Splice(): '' Removes / Replace / Add --Mutating-- ''
   </h3>
   <h5>
   The splice() method can be used to add new items to an array:
@@ -374,9 +396,7 @@ console.log(elements.join());
 
 
 ## Methods -2- Advanced method for Array :
-
 <ol>
-
   <li>
     <h3>
       Reverse():
@@ -547,7 +567,7 @@ const inventors = [
   
 <li>
 	<h3>
-		Map():	
+		Map():	'' Replace --Non-Mutating-- '' 
 	</h3>
 	<h5>
 		The map() method creates a new array populated with the results of calling a provided function on every element in the calling array.
@@ -681,7 +701,9 @@ return l;
 
 	
 <li>
-	<h3>	Filter():</h3>
+	<h3>	
+		Filter(): '' Removes --Non-Mutating-- ''
+	</h3>
 	<h5>	The filter() method creates a new array with all elements that pass the test implemented by the provided function. </h5>
 </li>
 	
